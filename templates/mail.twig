@@ -1,0 +1,7 @@
+<p>Заказ № {{order['order_id']}}</p>
+<p>Ваш заказ будет доставлен по адресу: ул.{{params['street']}}, д.{{params['home']}}, {{(params['part'] ? "кор.#{params['part']}, " : '')}} кв.{{params['appt']}} {{(params['floor'] ? ", эт.#{params['floor']}" : '')}}</p>
+{{(params['comment'] ? "<p>Комментарий:#{params['comment']}</p>" : '')}}
+<p>Оплата: {{(params['payment'] == 'card' ? 'Картой' : 'Наличными')}}</p>
+<p>{{(params['callback'] == 'yes' ? 'Я хочу чтобы мне перезвонили' : 'Не нужно мне перезванивать')}}</p>
+<p>Вы заказали DarkBeefBurger за 500 рублей, 1 шт</p>
+<p>{{(order['count'] == 1 ? "Спасибо - это ваш первый заказ" : "Спасибо! Это уже #{order['count']} заказ")}}</p>
